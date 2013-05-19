@@ -1,5 +1,5 @@
-<!DOCTYPE html>
-<html>
+﻿<!DOCTYPE html>
+<html lang="zh-CN">
 	<head>
 		<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
 		<script language="JavaScript" src="//ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
@@ -28,20 +28,30 @@
 		</script> 
 	</head>
 	<body>
-		<div style="width:330px;float:left;">
-			<div id="webcam">
-			</div>
-			<div style="margin:5px;">
-				<img src="webcamlogo.png" style="vertical-align:text-top"/>
-				<select id="cameraNames" size="1" onChange="changeCamera()" style="width:245px;font-size:10px;height:25px;">
-				</select>
-			</div>
-		</div>
-		<div style="width:135px;float:left;">
-			<p><button class="btn btn-small" id="btn1" onclick="$('#decoded').text($.scriptcam.getBarCode());">Decode image</button></p>
-		</div>
-		<div style="width:200px;float:left;">
-			<p id="decoded"></p>
-		</div>
+		<div style="width:400px;">
+		    <div style="top:0px;height=200px;width=100%;">
+                <h1>学生答题卡识别演示</h1>
+				<p>这里的这个演示可以实现对学生名片以及条形码的识别.</p>
+				<p>我们希望可以实现对整个答题卡的视频识别，并允许老师在不操作键盘的情况下快速扫描几十套学生试卷。</p>
+            </div>
+		    <div style="float:left;position: relative;">
+                <div style="width:330px;float:left;">
+                    <div id="webcam">
+                    </div>
+                    <div style="margin:5px;">
+                        <img src="webcamlogo.png" style="vertical-align:text-top"/>
+                        <select id="cameraNames" size="1" onChange="changeCamera()" style="width:245px;font-size:10px;height:25px;">
+                        </select>
+                    </div>
+                </div>
+                <div style="width:135px;float:left;">
+                    <p><button class="btn btn-small" id="btn1" onclick="$('#decoded').text($.scriptcam.getBarCode());">解码图片</button></p>
+                    <p></p>
+                </div>
+                <div style="width:200px;float:left;">
+                    <p id="decoded"></p>
+                </div>
+            </div>
+        </div>
 	</body>
 </html>
